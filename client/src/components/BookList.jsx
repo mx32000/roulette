@@ -1,10 +1,10 @@
 import Book from "./Book"
 
-export default function BookList() {
+export default function BookList(props) {
   return (
     <>
       <h1>books</h1>
-      <Book />
+      {props.books.map(book => <Book book={book.fields} />)}
     </>
   )
 }
