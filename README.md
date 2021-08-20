@@ -16,96 +16,101 @@ Roulette is a site where you can get a random book selection from a dynamic, use
 
 ## Component Hierarchy
 
-![component hierarchy](https://res.cloudinary.com/dcdasnmmz/image/upload/v1629431811/Roulette/component_hierarchy_iyf5kc.png)
+![component hierarchy](https://res.cloudinary.com/dcdasnmmz/image/upload/v1629471250/Roulette/whimsical_component_hierarchy_bkfoza.png)
 
 ## API and Data Sample
-
-Show us a snippet of JSON returned by your Airtable (you can find it under the API documentation) so we know you can access it and get the info you need. This __must__ be properly formatted. An example is below:
 
 ```json
 {
     "records": [
         {
-            "id": "recONRzIUTuZ5lXaF",
+            "id": "rec7S7YH4lUSov5FR",
             "fields": {
-                "author": "Liz Yrineo",
-                "setup": "Why did the tomato turn red?",
-                "punchline": "Because it saw the salad dressing!"
+                "title": "Goodnight Moon",
+                "author": "Margaret Wise Brown",
+                "image": "https://syndetics.com/index.aspx?isbn=9780062573094/LC.JPG",
+                "genre": "Children's Literature",
+                "summary": "Before going to sleep, a little rabbit says goodnight to all of his familiar possessions as his big, green bedroom slowly darkens."
             },
-            "createdTime": "2020-11-30T16:03:09.000Z"
+            "createdTime": "2021-08-20T13:39:34.000Z"
         },
         {
-            "id": "rec3oYZ5Tp0AIDsKe",
+            "id": "recAkZrHBK0VAE4Vd",
             "fields": {
-                "author": "Rachel Moskowitz",
-                "setup": "What did the green grape say to the red grape?",
-                "punchline": "Breathe, idiot, breathe!"
+                "title": "The Gunslinger (The Dark Tower 1)",
+                "author": "Stephen King",
+                "genre": "Fantasy",
+                "summary": "Roland, the world's last gunslinger, tracks an enigmatic man in black toward a forbidding Dark Tower, fighting forces both mortal and other-worldly on his quest.",
+                "image": "https://syndetics.com/index.aspx?isbn=9781501143519/LC.JPG"
             },
-            "createdTime": "2020-11-30T16:03:09.000Z"
+            "createdTime": "2021-08-20T13:39:34.000Z"
         },
         {
-            "id": "recA34tOaoE1IVeC1",
+            "id": "recvUF1ZD4NtGqRcH",
             "fields": {
-                "author": "Gary Grant",
-                "setup": "How do you make holy water?",
-                "punchline": "You boil the hell out of it!"
+                "title": "The Clone Codes",
+                "author": "Patricia McKissack, Frederick McKissack, John Patrick McKissack",
+                "genre": "Science Fiction",
+                "summary": "On the run from a bounty hunter who arrested her mother for being part of a secret society devoted to freeing clones, thirteen-year-old Leanna learns amazing truths about herself and her family as she is forced to consider the value of freedom and what it really means to be human in 2170 America.",
+                "image": "https://syndetics.com/index.aspx?isbn=9780439929837/LC.JPG"
             },
-            "createdTime": "2020-11-30T16:03:09.000Z"
+            "createdTime": "2021-08-20T13:39:34.000Z"
         }
-    ],
-    "offset": "recA34tOaoE1IVeC1"
+    ]
 }
 ```
 
 ### MVP/PostMVP
 
-The functionality will then be divided into two separate lists: MVP and PostMVP.  Carefully decide what is placed into your MVP, as the client will expect this functionality to be implemented upon project completion.  
-
 #### MVP 
-*These are examples only. Replace with your own MVP features.*
 
-- Find and use external api 
-- Render data on page 
-- Allow user to choose favorites 
+- Make get request to Airtable to get the book entries
+- Display a random book from the list upon user prompt
+- Allow user to view details of a given book entry
+- Display all book entries in a All Books tab
+- Allow user to add new book entries
+- Allow user to edit details from existing book entries
+- Allow user to delete existing book entries
 
 #### PostMVP  
-*These are examples only. Replace with your own Post-MVP features.*
 
-- Add second API
-- Use local storage to save user favorites
+- Add the ability to search under the All Books tab
+- Create multiple tables for different categories (movies, food, etc)
+- Allow user to choose which category they want to get a selection from
+- Connect third-party API to offer autofill suggestions when adding new books?
 
 ## Project Schedule
 
-This schedule will be used to keep track of your progress throughout the week and align with our expectations. Here's an example.
-
 |  Day | Deliverable | Status
 |---|---| ---|
-|July 10-12| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
-|July 13| Project Approval | Incomplete
-|July 13| Core Application Structure (HTML, CSS, etc.) | Incomplete
-|July 14| Pseudocode / actual code | Incomplete
-|July 15| Initial Clickable Model  | Incomplete
-|July 16| MVP | Incomplete
-|July 17| Presentations | Incomplete
+|August 19| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
+|August 20| Finishing Documentation / Project Approval / Application Structure | Incomplete
+|August 23| GET, POST, PUT, and DELETE requests / | Incomplete
+|August 24| Form & Database Handling / CSS | Incomplete
+|August 25| Responsive Design / MVP / starting PostMVP | Incomplete
+|August 26| Final changes / PostMVP | Incomplete
+|August 27| Presentations | Incomplete
 
 ## Timeframes
 
-Tell us how long you anticipate spending on each area of development. Be sure to consider how many hours a day you plan to be coding and how many days you have available until presentation day.
-
-Time frames are also key in the development cycle.  You have limited time to code all parts of your app.  Your estimates can then be used to evalute possibilities based on time needed and the actual time you have before the app must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add an additional hour or two to each component to play it safe. Throughout your project, keep track of your Time Invested and Actual Time and update your README regularly.
-
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Adding Form | H | 3hrs| 3.5hrs | 3.5hrs |
-| Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
-| Total | H | 6hrs| 5hrs | 5hrs |
+| Setting up Routes and Links | H | 2hrs| 0hrs | 0hrs |
+| Form component | H | 2hrs| 0hrs | 0hrs |
+| Menu | H | 3hrs| 0hrs | 0hrs |
+| Select random book | H | 1hr| 0hrs | 0hrs |
+| Book list | H | 3hrs| 0hrs | 0hrs |
+| API Requests | H | 3hrs| 0hrs | 0hrs |
+| Handling form field problems | M | 3hrs| 0hrs | 0hrs |
+| Handling not enough data | M | 2hrs| 0hrs | 0hrs |
+| Total | H | 19hrs| 5hrs | 5hrs |
 
 ## SWOT Analysis
 
-### Strengths:
+### Strengths: Logic 
 
-### Weaknesses:
+### Weaknesses: Planning, creativity
 
-### Opportunities:
+### Opportunities: Learning how to utilize Airtable for personal use
 
-### Threats:
+### Threats: Getting overwhelmed by deadlines/scope of project - I will try to focus on going task by task instead of thinking about everything that is left to do
