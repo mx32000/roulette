@@ -5,16 +5,20 @@ export default function Roulette(props) {
   const [book, setBook] = useState({});
   const {books} = props;
 
+  const spin = () => {
+    const bookInd = Math.floor(Math.random() * books.length);
+    setBook(books[bookInd].fields);
+  }
+
   useEffect(() => {
     if(books.length===0) return;
-    const bookInd = Math.floor(Math.random() * books.length);
-    setBook(books[bookInd].fields)
+    spin();
   }, [books])
 
   return(
     <>
-      <h1>Roulette</h1>
       <Book book={book}/>
+      <button onClick={spin}>Spin!</button>
     </>
   )
 }
