@@ -1,6 +1,9 @@
 import './App.css';
 import {Route} from 'react-router-dom';
 import Navbar from './components/Navbar';
+import Roulette from './components/Roulette';
+import BookList from './components/BookList';
+import Form from './components/Form';
 
 function App() {
   return (
@@ -8,13 +11,13 @@ function App() {
       <header><h1>Roulette</h1></header>
       <Navbar />
       <Route path="/" exact>
-        <h1>Home page</h1>
+        <Roulette />
       </Route>
       <Route path="/books" exact>
-        <h1>Books page</h1>
+        <BookList />
       </Route>
       <Route path="/new">
-        <h1>New Book</h1>
+        <Form />
       </Route>
     </>
   );
