@@ -107,10 +107,14 @@ Roulette is a site where you can get a random book selection from a dynamic, use
 
 ## SWOT Analysis
 
-### Strengths: Logic 
+### Strengths: 
+Logic 
 
-### Weaknesses: Planning, creativity
+### Weaknesses: 
+Planning, creativity
 
-### Opportunities: Learning how to utilize Airtable for personal use
+### Opportunities: 
+Learning how to utilize Airtable for personal use
 
-### Threats: Getting overwhelmed by deadlines/scope of project - I will try to focus on going task by task instead of thinking about everything that is left to do
+### Threats: 
+Getting overwhelmed by deadlines/scope of project - I will try to focus on going task by task instead of thinking about everything that is left to do
