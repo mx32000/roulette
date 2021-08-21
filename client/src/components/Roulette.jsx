@@ -7,13 +7,13 @@ export default function Roulette(props) {
 
   const spin = () => {
     const bookInd = Math.floor(Math.random() * books.length);
-    setBook(books[bookInd].fields);
+    setBook(books[bookInd]);
   }
 
   useEffect(() => {
     if(books.length===0) return;
     spin();
-  }, [books])
+  })
 
   return(
     <>

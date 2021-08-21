@@ -7,6 +7,7 @@ import Form from './components/Form';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { baseUrl, config } from './services';
+import BookDetails from './components/BookDetails';
 
 function App() {
   const [books, setBooks] = useState([]);
@@ -31,6 +32,9 @@ function App() {
       </Route>
       <Route path="/new">
         <Form />
+      </Route>
+      <Route path="/books/show/:id">
+        <BookDetails />
       </Route>
     </>
   );
