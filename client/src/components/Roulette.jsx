@@ -13,13 +13,14 @@ export default function Roulette(props) {
   }
 
   useEffect(() => {
-    if(books.length===0) return;
-    spin();
+    
   })
 
-  return(
+  return (
     <>
-      <Book book={book}/>
+      {
+        book.fields ? <Book book={book}/> : <img src="https://res.cloudinary.com/dcdasnmmz/image/upload/v1629514381/Roulette/mystery_tgwugj.png" alt="question mark" />
+      }
       <button onClick={spin}>Spin!</button>
     </>
   )
