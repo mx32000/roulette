@@ -30,11 +30,11 @@ function App() {
       <Route path="/books" exact>
         <BookList books={books}/>
       </Route>
-      <Route path="/new">
+      <Route path="/books/new">
         <Form />
       </Route>
       <Route path="/books/show/:id">
-        <BookDetails />
+        <BookDetails books={books}/>
       </Route>
     </>
   );

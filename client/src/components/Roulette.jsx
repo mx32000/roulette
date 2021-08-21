@@ -6,7 +6,9 @@ export default function Roulette(props) {
   const {books} = props;
 
   const spin = () => {
+    console.log("spin");
     const bookInd = Math.floor(Math.random() * books.length);
+    console.log(books[bookInd].fields.title)
     setBook(books[bookInd]);
   }
 
