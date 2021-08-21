@@ -1,12 +1,21 @@
-import { useParams } from "react-router-dom";
+import axios from "axios";
+import { useHistory, useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { baseUrl, config } from "../services";
 
 export default function BookDetails(props) {
   const params = useParams();
+  const history = useHistory();
 
   if (props.books.length === 0) return null;
 
   const book = props.books.find(book => book.id === params.id);
+
+  const deleteBook = async () => {
+    await axios.delete(`${baseUrl}/${params.id}`, config);
+    props.setToggleFetch(prevState => !prevState);
+    history.push("/books")
+  }
 
   return book.fields.title ? (
     <div className="details">
@@ -16,6 +25,7 @@ export default function BookDetails(props) {
       <p>Genre: {book.fields.genre}</p>
       <p>Summary: {book.fields.summary}</p>
       <Link to={`/books/edit/${book.id}`}>Edit</Link>
+      <button onClick={deleteBook}>Delete</button>
     </div>
   ) : null;
 }

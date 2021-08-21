@@ -11,6 +11,7 @@ import BookDetails from './components/BookDetails';
 
 function App() {
   const [books, setBooks] = useState([]);
+  const [toggleFetch, setToggleFetch] = useState(false);
 
   useEffect(() => {
     const getBooks = async () => {
@@ -18,7 +19,7 @@ function App() {
       setBooks(res.data.records);
     }
     getBooks();
-  }, []);
+  }, [toggleFetch]);
 
   return (
     <>
@@ -31,13 +32,13 @@ function App() {
         <BookList books={books}/>
       </Route>
       <Route path="/books/new">
-        <Form books={books}/>
+        <Form books={books} setToggleFetch={setToggleFetch}/>
       </Route>
       <Route path="/books/show/:id">
-        <BookDetails books={books}/>
+        <BookDetails books={books} setToggleFetch={setToggleFetch}/>
       </Route>
       <Route path="/books/edit/:id">
-        <Form books={books}/>
+        <Form books={books} setToggleFetch={setToggleFetch}/>
       </Route>
     </>
   );

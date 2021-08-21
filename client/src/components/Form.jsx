@@ -41,6 +41,7 @@ export default function Form(props) {
     } else {
       await axios.post(baseUrl, {fields: newBook}, config);
     }
+    props.setToggleFetch(prevState => !prevState);
   }
 
   return (
