@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom";
 import { baseUrl, config } from "../services";
 
@@ -12,16 +12,20 @@ export default function Form(props) {
 
   const params = useParams();
 
-  if (props.books.length && params.id) {
-    const book = props.books.find(book => book.id === params.id);
-    if (book.fields) {
-      setTitle(book.fields.title);
-      setAuthor(book.fields.author);
-      setImage(book.fields.image);
-      setGenre(book.fields.genre);
-      setSummary(book.fields.summary);
+  useEffect(() => {
+    if (props.books.length && params.id) {
+      const book = props.books.find(book => book.id === params.id);
+      if (book.fields) {
+        setTitle(book.fields.title);
+        setAuthor(book.fields.author);
+        setImage(book.fields.image);
+        setGenre(book.fields.genre);
+        setSummary(book.fields.summary);
+      }
     }
-  }
+  }, [params.id, props.books])
+
+
 
   const handleSubmit = async e => {
     e.preventDefault();
@@ -32,7 +36,11 @@ export default function Form(props) {
       genre,
       summary
     }
-    await axios.post(baseUrl, {fields: newBook}, config);
+    if (params.id) {
+      await axios.put(`${baseUrl}/${params.id}`, {fields: newBook}, config)
+    } else {
+      await axios.post(baseUrl, {fields: newBook}, config);
+    }
   }
 
   return (

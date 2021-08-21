@@ -36,6 +36,9 @@ function App() {
       <Route path="/books/show/:id">
         <BookDetails books={books}/>
       </Route>
+      <Route path="/books/edit/:id">
+        <Form books={books}/>
+      </Route>
     </>
   );
 }
