@@ -1,4 +1,5 @@
 import {Link} from 'react-router-dom'
+import '../css/Book.css'
 
 export default function Book(props) {
   const {book} = props;

@@ -1,3 +1,14 @@
 * {
   margin: 0;
 }
+
+body {
+  text-align: center;
+}
+
+header {
+  background-color: rgb(114, 122, 50);
+  color: rgb(233 238 188);
+  padding: 15px;
+}
+
