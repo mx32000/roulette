@@ -1,14 +1,28 @@
 * {
   margin: 0;
+  box-sizing: border-box;
 }
 
 body {
   text-align: center;
 }
 
-header {
+header .header {
   background-color: rgb(114, 122, 50);
-  color: rgb(233 238 188);
+  color: rgb(233, 238, 188);
   padding: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
+header .header h1 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%)
+}
+
+header .header i {
+  margin-left: auto;
+  color: rgb(233, 238, 188);
+}

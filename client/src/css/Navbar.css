@@ -10,3 +10,7 @@ nav a {
   color: rgb(78 84 33);
   flex: 1 1 0px;
 }
+
+nav a:hover {
+  background-color: #c9da5f;
+}
