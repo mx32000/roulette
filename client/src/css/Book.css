@@ -8,3 +8,7 @@
 .book img {
   max-width: 30%;
 }
+
+.roulette .book img {
+  max-width: 100%;
+}

@@ -23,13 +23,8 @@ function App() {
 
   return (
     <>
-      <header>
-        <div className="header">
-          <h1>Roulette</h1>
-          <i class="fas fa-2x fa-bars"></i>
-        </div>
-        <Navbar />
-      </header>
+
+      <Navbar />
       <Route path="/" exact>
         <Roulette books={books}/>
       </Route>
