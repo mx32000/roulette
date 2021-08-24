@@ -13,7 +13,7 @@ export default function Roulette(props) {
 
   return (
     <div className="roulette">
-      
+      <p>Looking for a book to read? Look no further! Spin the wheel, and discover your fate.</p>
       {
         book.fields ? <Book book={book}/> : <img src="https://res.cloudinary.com/dcdasnmmz/image/upload/v1629514381/Roulette/mystery_tgwugj.png" alt="question mark" />
       }
