@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react"
-import { useParams } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 import { baseUrl, config } from "../services";
 
 export default function Form(props) {
@@ -11,6 +11,7 @@ export default function Form(props) {
   const [summary, setSummary] = useState("");
 
   const params = useParams();
+  const history = useHistory();
 
   useEffect(() => {
     if (props.books.length && params.id) {
@@ -36,12 +37,14 @@ export default function Form(props) {
       genre,
       summary
     }
+    let res = null;
     if (params.id) {
-      await axios.put(`${baseUrl}/${params.id}`, {fields: newBook}, config)
+      res = await axios.put(`${baseUrl}/${params.id}`, {fields: newBook}, config)
     } else {
-      await axios.post(baseUrl, {fields: newBook}, config);
+      res = await axios.post(baseUrl, {fields: newBook}, config);
     }
     props.setToggleFetch(prevState => !prevState);
+    history.push(`/books/show/${res.data.id}`);
   }
 
   return (

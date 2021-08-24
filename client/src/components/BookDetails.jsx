@@ -7,9 +7,8 @@ export default function BookDetails(props) {
   const params = useParams();
   const history = useHistory();
 
-  if (props.books.length === 0) return null;
-
   const book = props.books.find(book => book.id === params.id);
+  if (!book) return null;
 
   const deleteBook = async () => {
     await axios.delete(`${baseUrl}/${params.id}`, config);

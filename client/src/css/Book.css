@@ -6,14 +6,10 @@
 }
 
 .roulette .book {
-  width: 100%;
   max-height: fit-content;
-}
-
-.book img {
-  max-width: 30%;
 }
 
 .roulette .book img {
   max-height: 80vh;
+  width: auto;
 }
