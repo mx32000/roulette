@@ -12,6 +12,7 @@ export default function Navbar(props) {
 
   const changeActive = e => {
     setActiveTab(e.target.innerText);
+    setMenuStatus("collapsed");
   }
 
   return (
