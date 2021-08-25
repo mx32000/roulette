@@ -13,12 +13,16 @@ export default function Roulette(props) {
 
   return (
     <div className="roulette">
-      <p>Looking for a book to read? Look no further! Spin the wheel, and discover your fate.</p>
-      <p>Roulette selects from a list of books entered by fellow readers. You can see the list under the See All Books tab, or enter your own book info to add to the selection!</p>
       {
-        book.fields ? <Book book={book}/> : <img src="https://res.cloudinary.com/dcdasnmmz/image/upload/v1629514381/Roulette/mystery_tgwugj.png" alt="question mark" />
+        book.fields ? <Book book={book}/> : (
+          <>
+            <p>Looking for a book to read? Look no further! Spin the wheel, and discover your fate.</p>
+            <p>Roulette selects from a list of books entered by fellow readers. You can see the list under the See All Books tab, or enter your own book info to add to the selection!</p>
+            <img src="https://res.cloudinary.com/dcdasnmmz/image/upload/v1629514381/Roulette/mystery_tgwugj.png" alt="question mark" />
+          </>
+        )
       }
-      <button onClick={spin}>Spin!</button>
+      <button onClick={spin}>{book.fields ? "Spin again!" : "Go for a spin!"}</button>
     </div>
   )
 }

@@ -12,7 +12,7 @@
   width: 100%;
 }
 
-.roulette img {
+.roulette > img {
   max-width: 50%;
   margin: 20px;
 }
@@ -20,6 +20,7 @@
 .roulette .book {
   width: 100%;
   max-height: fit-content;
+  margin: 20px;
 }
 
 .roulette .book img {
