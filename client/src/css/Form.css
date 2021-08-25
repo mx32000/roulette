@@ -1,5 +1,5 @@
 form {
-  margin: 0 12%;
+  margin: 50px 12%;
 }
 
 form .inputs {
@@ -7,6 +7,7 @@ form .inputs {
   grid-template-columns: 1fr 83%;
   grid-template-rows: repeat(4, 1fr), 4fr;
   gap: 10px;
+  margin-bottom: 25px;
 }
 
 form .inputs label {
