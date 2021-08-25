@@ -13,6 +13,7 @@
 .details img {
   padding: 10px 0;
   justify-self: center;
+  max-width: 100%;
 }
 
 .details p {
@@ -29,7 +30,7 @@
   background-color: #b30606;
 }
 
-@media screen and (min-width: 701px) {
+@media screen and (min-width: 751px) {
   .details {
     display: grid;
     grid-template-columns: 1fr 2fr;
