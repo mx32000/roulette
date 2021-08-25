@@ -44,6 +44,7 @@ export default function Form(props) {
       res = await axios.post(baseUrl, {fields: newBook}, config);
     }
     props.setToggleFetch(prevState => !prevState);
+    props.setActiveTab("");
     history.push(`/books/show/${res.data.id}`);
   }
 

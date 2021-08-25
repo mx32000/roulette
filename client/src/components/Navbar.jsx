@@ -2,9 +2,9 @@ import { useState } from "react";
 import { Link } from "react-router-dom"
 import "../css/Navbar.css"
 
-export default function Navbar() {
+export default function Navbar(props) {
+  const {activeTab, setActiveTab} = props;
   const [menuStatus, setMenuStatus] = useState("collapsed");
-  const [activeTab, setActiveTab] = useState("/");
 
   const toggleMenu = () => {
     setMenuStatus(menuStatus === "collapsed" ? "expanded" : "collapsed");

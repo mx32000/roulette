@@ -14,7 +14,7 @@ export default function Roulette(props) {
   return (
     <div className="roulette">
       {
-        book.fields ? <Book book={book}/> : (
+        book.fields ? <Book book={book} setActiveTab={props.setActiveTab}/> : (
           <>
             <p>Looking for a book to read? Look no further! Spin the wheel, and discover your fate.</p>
             <p>Roulette selects from a list of books entered by fellow readers. You can see the list under the See All Books tab, or enter your own book info to add to the selection!</p>

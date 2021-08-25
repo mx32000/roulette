@@ -12,6 +12,7 @@ import BookDetails from './components/BookDetails';
 function App() {
   const [books, setBooks] = useState([]);
   const [toggleFetch, setToggleFetch] = useState(false);
+  const [activeTab, setActiveTab] = useState("/");
 
   useEffect(() => {
     const getBooks = async () => {
@@ -24,21 +25,21 @@ function App() {
   return (
     <>
 
-      <Navbar />
+      <Navbar activeTab={activeTab} setActiveTab={setActiveTab}/>
       <Route path="/" exact>
-        <Roulette books={books}/>
+        <Roulette books={books} setActiveTab={setActiveTab}/>
       </Route>
       <Route path="/books" exact>
-        <BookList books={books}/>
+        <BookList books={books} setActiveTab={setActiveTab}/>
       </Route>
       <Route path="/books/new">
-        <Form books={books} setToggleFetch={setToggleFetch}/>
+        <Form books={books} setToggleFetch={setToggleFetch} setActiveTab={setActiveTab}/>
       </Route>
       <Route path="/books/show/:id">
-        <BookDetails books={books} setToggleFetch={setToggleFetch}/>
+        <BookDetails books={books} setToggleFetch={setToggleFetch} setActiveTab={setActiveTab}/>
       </Route>
       <Route path="/books/edit/:id">
-        <Form books={books} setToggleFetch={setToggleFetch}/>
+        <Form books={books} setToggleFetch={setToggleFetch} setActiveTab={setActiveTab}/>
       </Route>
     </>
   );

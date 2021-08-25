@@ -6,7 +6,7 @@ export default function BookList(props) {
     <>
       <h1>books</h1>
       <div className="book-list">
-        {props.books.map((book, index) => <Book book={book} key={index}/>)}
+        {props.books.map((book, index) => <Book book={book} key={index} setActiveTab={() => props.setActiveTab("")} />)}
       </div>
     </>
   )

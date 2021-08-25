@@ -13,6 +13,7 @@ export default function BookDetails(props) {
   const deleteBook = async () => {
     await axios.delete(`${baseUrl}/${params.id}`, config);
     props.setToggleFetch(prevState => !prevState);
+    props.setActiveTab("See All Books");
     history.push("/books")
   }
 
