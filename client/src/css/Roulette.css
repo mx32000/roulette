@@ -3,11 +3,21 @@
   flex-direction: column;
   margin: 0 auto;
   align-items: center;
+  max-height: fit-content;
 }
 
 .roulette img {
   max-width: 50%;
+}
+
+.roulette .book {
+  width: 100%;
+  max-height: fit-content;
+}
+
+.roulette .book img {
   max-height: 75vh;
+  width: auto;
 }
 
 .roulette button {

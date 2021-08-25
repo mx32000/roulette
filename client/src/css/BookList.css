@@ -2,3 +2,13 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
+
+.book-list .book {
+  margin: 10px;
+}
+
+@media screen and (max-width: 1250px) {
+  .book-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
