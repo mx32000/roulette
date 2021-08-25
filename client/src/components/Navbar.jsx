@@ -3,10 +3,15 @@ import { Link } from "react-router-dom"
 import "../css/Navbar.css"
 
 export default function Navbar() {
-  const [menuStatus, setMenuStatus] = useState("collapsed")
+  const [menuStatus, setMenuStatus] = useState("collapsed");
+  const [activeTab, setActiveTab] = useState("/");
 
   const toggleMenu = () => {
     setMenuStatus(menuStatus === "collapsed" ? "expanded" : "collapsed");
+  }
+
+  const changeActive = e => {
+    setActiveTab(e.target.innerText);
   }
 
   return (
@@ -17,9 +22,9 @@ export default function Navbar() {
       </div>
       <div className="nav-container">
         <nav className={menuStatus}>
-          <Link to="/">Home</Link>
-          <Link to="/books">See All Books</Link>
-          <Link to="/books/new">Add New Book</Link>
+          <Link to="/" className={activeTab === "Home" ? "active" : ""} onClick={changeActive}>Home</Link>
+          <Link to="/books" className={activeTab === "See All Books" ? "active" : ""} onClick={changeActive}>See All Books</Link>
+          <Link to="/books/new" className={activeTab === "Add New Book" ? "active" : ""} onClick={changeActive}>Add New Book</Link>
         </nav>
       </div>
     </header>
