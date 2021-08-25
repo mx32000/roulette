@@ -1,4 +1,24 @@
 form {
-  display: flex;
-  flex-direction: column;
+  margin: 0 12%;
+}
+
+form .inputs {
+  display: grid;
+  grid-template-columns: 1fr 83%;
+  grid-template-rows: repeat(4, 1fr), 4fr;
+  gap: 10px;
+}
+
+form .inputs label {
+  justify-self: left;
+  padding: 3px;
+}
+
+form .inputs input {
+  padding: 3px;
+}
+
+form .inputs textarea {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 150px;
 }
