@@ -56,6 +56,7 @@
 
   .details img {
     grid-column: 1 / 2;
+    max-width: 100%;
   }
 
   .details .buttons {
