@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react"
 import { useHistory, useParams } from "react-router-dom";
 import { baseUrl, config } from "../services";
+import "../css/Form.css";
 
 export default function Form(props) {
   const [title, setTitle] = useState("");
@@ -50,16 +51,26 @@ export default function Form(props) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <label htmlFor="title">Title</label>
-      <input type="text" name="title" id="title" value={title} onChange={e => setTitle(e.target.value)}/>
-      <label htmlFor="author">Author</label>
-      <input type="text" name="author" id="author" value={author} onChange={e => setAuthor(e.target.value)}/>
-      <label htmlFor="image">Image URL</label>
-      <input type="text" name="image" id="image" value={image} onChange={e => setImage(e.target.value)}/>
-      <label htmlFor="genre">Genre</label>
-      <input type="text" name="genre" id="genre" value={genre} onChange={e => setGenre(e.target.value)}/>
-      <label htmlFor="summary">Summary</label>
-      <textarea name="summary" id="summary" value={summary} onChange={e => setSummary(e.target.value)}></textarea>
+      <div className="form-group">
+        <label htmlFor="title">Title</label>
+        <input type="text" name="title" id="title" value={title} onChange={e => setTitle(e.target.value)}/>
+      </div>
+      <div className="form-group">
+        <label htmlFor="author">Author</label>
+        <input type="text" name="author" id="author" value={author} onChange={e => setAuthor(e.target.value)}/>
+      </div>
+      <div className="form-group">
+        <label htmlFor="image">Image URL</label>
+        <input type="text" name="image" id="image" value={image} onChange={e => setImage(e.target.value)}/>
+      </div>
+      <div className="form-group">
+        <label htmlFor="genre">Genre</label>
+        <input type="text" name="genre" id="genre" value={genre} onChange={e => setGenre(e.target.value)}/>
+      </div>
+      <div className="form-group">
+        <label htmlFor="summary">Summary</label>
+        <textarea name="summary" id="summary" value={summary} onChange={e => setSummary(e.target.value)}></textarea>
+      </div>
       <button type="submit">Submit</button>
     </form>
   )

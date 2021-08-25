@@ -24,7 +24,6 @@ function App() {
 
   return (
     <>
-
       <Navbar activeTab={activeTab} setActiveTab={setActiveTab}/>
       <Route path="/" exact>
         <Roulette books={books} setActiveTab={setActiveTab}/>
