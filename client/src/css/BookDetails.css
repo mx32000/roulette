@@ -33,7 +33,7 @@
   .details {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    margin: 50px 12%;
+    margin: 100px 12%;
   }
 
   .details .narrow {
