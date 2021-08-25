@@ -55,7 +55,7 @@ export default function Form(props) {
         <label htmlFor="title">Title</label>
         <input type="text" name="title" id="title" value={title} onChange={e => setTitle(e.target.value)} placeholder="Book Title"/>
         <label htmlFor="author">Author</label>
-        <input type="text" name="author" id="author" value={author} onChange={e => setTitle(e.target.value)} placeholder="Author Name"/>
+        <input type="text" name="author" id="author" value={author} onChange={e => setAuthor(e.target.value)} placeholder="Author Name"/>
         <label htmlFor="image">Image URL</label>
         <input type="text" name="image" id="image" value={image} onChange={e => setImage(e.target.value)} placeholder="Genre Name"/>
         <label htmlFor="genre">Genre</label>
