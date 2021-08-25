@@ -5,10 +5,19 @@
 
 .book-list .book {
   margin: 10px;
+  justify-content: center;
+}
+
+.book-list .book h2 {
+  margin-bottom: auto;
 }
 
 .book-list .book img {
   max-width: 70%;
+}
+
+.book-list .book a {
+  margin-top: auto;
 }
 
 @media screen and (max-width: 1250px) {
