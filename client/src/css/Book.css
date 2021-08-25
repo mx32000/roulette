@@ -1,12 +1,10 @@
 .book {
   display: flex;
   flex-direction: column;
-  max-height: 500px;
   align-items: center;
 }
 
 .roulette .book {
-  max-height: fit-content;
 }
 
 .roulette .book img {
