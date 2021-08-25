@@ -7,6 +7,10 @@
   margin: 10px;
 }
 
+.book-list .book img {
+  max-width: 70%;
+}
+
 @media screen and (max-width: 1250px) {
   .book-list {
     grid-template-columns: 1fr 1fr;

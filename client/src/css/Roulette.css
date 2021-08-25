@@ -23,6 +23,10 @@
   margin: 20px;
 }
 
+.roulette .book h2 {
+  font-size: 36px;
+}
+
 .roulette .book img {
   max-height: 75vh;
   width: auto;
