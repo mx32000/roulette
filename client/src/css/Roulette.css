@@ -1,13 +1,20 @@
 .roulette {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
+  margin: 0 12%;
   align-items: center;
   max-height: fit-content;
 }
 
+.roulette p {
+  margin: 10px;
+  text-align: left;
+  width: 100%;
+}
+
 .roulette img {
   max-width: 50%;
+  margin: 20px;
 }
 
 .roulette .book {
