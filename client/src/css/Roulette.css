@@ -1,7 +1,7 @@
 .roulette {
   display: flex;
   flex-direction: column;
-  margin: 0 12%;
+  margin: 10px 25px;
   align-items: center;
   max-height: fit-content;
 }
@@ -19,16 +19,17 @@
 .roulette > img {
   max-width: 100%;
   margin: 20px;
+  max-height: 500px;
 }
 
 .roulette .book {
   width: 100%;
   max-height: fit-content;
-  margin: 20px;
+  margin: 10px;
 }
 
 .roulette .book h2 {
-  font-size: 36px;
+  font-size: 24px;
 }
 
 .roulette .book img {
@@ -37,11 +38,19 @@
 }
 
 @media screen and (min-width: 750px) {
+  .roulette {
+    margin: 0 12%;
+  }
+
   .roulette > img {
     width: 30%;
   }
 
   .roulette .wide {
     display: block;
+  }
+
+  .roulette .book h2 {
+    font-size: 36px;
   }
 }
