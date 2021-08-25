@@ -2,6 +2,7 @@ import axios from "axios";
 import { useHistory, useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { baseUrl, config } from "../services";
+import "../css/BookDetails.css";
 
 export default function BookDetails(props) {
   const params = useParams();
@@ -24,8 +25,10 @@ export default function BookDetails(props) {
       <img src={book.fields.image} alt={`${book.fields.title} cover`} />
       <p>Genre: {book.fields.genre}</p>
       <p>Summary: {book.fields.summary}</p>
-      <Link to={`/books/edit/${book.id}`}>Edit</Link>
-      <button onClick={deleteBook}>Delete</button>
+      <div className="buttons">
+        <Link to={`/books/edit/${book.id}`}><button>Edit</button></Link>
+        <button onClick={deleteBook} className="delete-button">Delete</button>
+      </div>
     </div>
   ) : null;
 }

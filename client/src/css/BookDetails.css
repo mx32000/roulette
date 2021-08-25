@@ -1,0 +1,25 @@
+.details {
+  margin: 5px;
+}
+
+.details h2 {
+  padding: 10px 0;
+}
+
+.details img {
+  padding: 10px 0;
+}
+
+.details p {
+  text-align: left;
+  padding: 10px;
+}
+
+.details .buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.details .buttons .delete-button {
+  background-color: #b30606;
+}
