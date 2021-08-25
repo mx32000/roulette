@@ -20,14 +20,17 @@ export default function BookDetails(props) {
 
   return book.fields.title ? (
     <div className="details">
-      <h2>{book.fields.title}</h2>
-      <h3>{book.fields.author}</h3>
-      <img src={book.fields.image} alt={`${book.fields.title} cover`} />
-      <p>Genre: {book.fields.genre}</p>
-      <p>Summary: {book.fields.summary}</p>
-      <div className="buttons">
-        <Link to={`/books/edit/${book.id}`}><button>Edit</button></Link>
-        <button onClick={deleteBook} className="delete-button">Delete</button>
+      <img src={book.fields.image} alt={`${book.fields.title} cover`} className="wide"/>
+      <div className="words">
+        <h2>{book.fields.title}</h2>
+        <h3>{book.fields.author}</h3>
+        <img src={book.fields.image} alt={`${book.fields.title} cover`} className="narrow"/>
+        <p>Genre: {book.fields.genre}</p>
+        <p>Summary: {book.fields.summary}</p>
+        <div className="buttons">
+          <Link to={`/books/edit/${book.id}`}><button>Edit</button></Link>
+          <button onClick={deleteBook} className="delete-button">Delete</button>
+        </div>
       </div>
     </div>
   ) : null;

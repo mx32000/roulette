@@ -20,14 +20,7 @@ header .header h1 {
 }
 
 header .header button {  
-  background-color: rgb(78, 84, 33);
-  margin-left: auto;
-  border: none;
   display: none;
-}
-
-header .header button i {
-  color: rgb(233, 238, 188);
 }
 
 header .nav-container nav {
@@ -49,8 +42,15 @@ header .nav-container nav a:hover, header .nav-container nav a.active {
 }
 
 @media screen and (max-width: 700px) {
-  header .header button {
+  header .header button {  
+    background-color: rgb(78, 84, 33);
+    margin-left: auto;
+    border: none;
     display: inline-block;
+  }
+
+  header .header button i {
+    color: rgb(233, 238, 188);
   }
 
   header .nav-container {
