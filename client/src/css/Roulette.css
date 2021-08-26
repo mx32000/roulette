@@ -19,7 +19,7 @@
 .roulette > img {
   max-width: 100%;
   margin: 20px;
-  max-height: min(500px, 50vh);
+  max-height: min(500px, 40vh);
 }
 
 .roulette .book {
