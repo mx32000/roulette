@@ -14,6 +14,7 @@ function App() {
   const [toggleFetch, setToggleFetch] = useState(false);
   const [activeTab, setActiveTab] = useState("Home");
   const [from, setFrom] = useState("");
+  const [book, setBook] = useState({});
 
   useEffect(() => {
     const getBooks = async () => {
@@ -27,7 +28,7 @@ function App() {
     <>
       <Navbar activeTab={activeTab} setActiveTab={setActiveTab}/>
       <Route path="/" exact>
-        <Roulette books={books} setActiveTab={setActiveTab} setFrom={setFrom}/>
+        <Roulette books={books} setActiveTab={setActiveTab} setFrom={setFrom} book={book} setBook={setBook}/>
       </Route>
       <Route path="/books" exact>
         <BookList books={books} setActiveTab={setActiveTab} setFrom={setFrom}/>

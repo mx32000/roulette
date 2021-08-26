@@ -3,8 +3,7 @@ import Book from "./Book";
 import "../css/Roulette.css";
 
 export default function Roulette(props) {
-  const [book, setBook] = useState({});
-  const {books} = props;
+  const {book, setBook, books, setFrom, setActiveTab} = props;
 
   const spin = () => {
     if (!books.length) {
@@ -13,13 +12,13 @@ export default function Roulette(props) {
     }
     const bookInd = Math.floor(Math.random() * books.length);
     setBook(books[bookInd]);
-    props.setFrom("roulette");
+    setFrom("roulette");
   }
 
   return (
     <div className="roulette">
       {
-        book.fields ? <Book book={book} setActiveTab={props.setActiveTab}/> : (
+        book.fields ? <Book book={book} setActiveTab={setActiveTab}/> : (
           <>
             <p>Looking for a book to read? Look no further! Spin the wheel, and discover your fate.</p>
             <p className="wide">Roulette selects from a list of books entered by fellow readers. You can see the list under the See All Books tab, or enter your own book info to add to the selection!</p>
