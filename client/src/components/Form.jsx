@@ -51,7 +51,7 @@ export default function Form(props) {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="info-form">
       <div className="inputs">
         <label htmlFor="title">Title</label>
         <input type="text" name="title" id="title" value={title} onChange={e => setTitle(e.target.value)} placeholder="Book Title" required/>
