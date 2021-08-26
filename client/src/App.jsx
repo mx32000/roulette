@@ -12,7 +12,7 @@ import BookDetails from './components/BookDetails';
 function App() {
   const [books, setBooks] = useState([]);
   const [toggleFetch, setToggleFetch] = useState(false);
-  const [activeTab, setActiveTab] = useState("/");
+  const [activeTab, setActiveTab] = useState("Home");
 
   useEffect(() => {
     const getBooks = async () => {
