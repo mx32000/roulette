@@ -19,7 +19,7 @@ export default function BookList(props) {
       <form>
         <div className="form-group"> 
           <label htmlFor="search">Search:</label>
-          <input type="search" name="search" id="search" value={search} onChange={e => setSearch(e.target.value)}/>
+          <input type="text" name="search" id="search" value={search} onChange={e => setSearch(e.target.value)}/>
         </div>
         <div className="form-group">
           <label htmlFor="field">Search by:</label>
