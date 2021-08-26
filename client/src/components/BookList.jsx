@@ -1,7 +1,6 @@
 import Book from "./Book"
 import "../css/BookList.css"
 import { useEffect, useState } from "react";
-import { Keyboard } from "react-native";
 
 export default function BookList(props) {
   const [search, setSearch] = useState("");
@@ -17,10 +16,7 @@ export default function BookList(props) {
 
   return (
     <div className="books-page">
-      <form onSubmit={e => {
-        Keyboard.dismiss();
-        e.preventDefault();
-      }}>
+      <form onSubmit={e => e.preventDefault()}>
         <div className="form-group"> 
           <label htmlFor="search">Search:</label>
           <input type="text" name="search" id="search" value={search} onChange={e => setSearch(e.target.value)}/>
