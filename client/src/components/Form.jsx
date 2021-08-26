@@ -3,6 +3,7 @@ import { useEffect, useState } from "react"
 import { useHistory, useParams } from "react-router-dom";
 import { baseUrl, config } from "../services";
 import "../css/Form.css";
+import { Link } from "react-router-dom";
 
 export default function Form(props) {
   const [title, setTitle] = useState("");
@@ -53,7 +54,7 @@ export default function Form(props) {
     <form onSubmit={handleSubmit}>
       <div className="inputs">
         <label htmlFor="title">Title</label>
-        <input type="text" name="title" id="title" value={title} onChange={e => setTitle(e.target.value)} placeholder="Book Title"/>
+        <input type="text" name="title" id="title" value={title} onChange={e => setTitle(e.target.value)} placeholder="Book Title" required/>
         <label htmlFor="author">Author</label>
         <input type="text" name="author" id="author" value={author} onChange={e => setAuthor(e.target.value)} placeholder="Author Name"/>
         <label htmlFor="image">Image URL</label>
@@ -63,7 +64,10 @@ export default function Form(props) {
         <label htmlFor="summary">Summary</label>
         <textarea name="summary" id="summary" value={summary} onChange={e => setSummary(e.target.value)} placeholder="John Doe, a fervid reader, was looking for a book to read. That's when he found a website that could choose one for him!"></textarea>
       </div>
-      <button type="submit">Submit</button>
+      <div className="buttons">
+        {params.id ? <Link to={`/books/show/${params.id}`}><button type="button">Cancel</button></Link> : null}
+        <button type="submit">Submit</button>
+      </div>
     </form>
   )
 }
