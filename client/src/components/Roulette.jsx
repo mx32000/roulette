@@ -7,6 +7,10 @@ export default function Roulette(props) {
   const {books} = props;
 
   const spin = () => {
+    if (!books.length) {
+      alert("Oh no! The database is empty! Please add your own book(s) in order to spin.");
+      return;
+    }
     const bookInd = Math.floor(Math.random() * books.length);
     setBook(books[bookInd]);
   }
