@@ -17,15 +17,19 @@ export default function BookList(props) {
   return (
     <div className="books-page">
       <form>
-        <label htmlFor="search">Search:</label>
-        <input type="search" name="search" id="search" value={search} onChange={e => setSearch(e.target.value)}/>
-        <label htmlFor="field">Search by:</label>
-        <select name="field" id="field" onChange={e => setField(e.target.value)}>
-          <option value="title" selected>Title</option>
-          <option value="author">Author</option>
-          <option value="genre">Genre</option>
-          <option value="keyword">Keyword</option>
-        </select>
+        <div className="form-group"> 
+          <label htmlFor="search">Search:</label>
+          <input type="search" name="search" id="search" value={search} onChange={e => setSearch(e.target.value)}/>
+        </div>
+        <div className="form-group">
+          <label htmlFor="field">Search by:</label>
+          <select name="field" id="field" onChange={e => setField(e.target.value)}>
+            <option value="title" selected>Title</option>
+            <option value="author">Author</option>
+            <option value="genre">Genre</option>
+            <option value="keyword">Keyword</option>
+          </select>
+        </div>
       </form>
       <div className="book-list">
         {books.filter(book => matchesSearch(book))

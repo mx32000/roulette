@@ -2,6 +2,20 @@
   padding: 5px;
 }
 
+.books-page form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.books-page form .form-group {
+  margin: 5px;
+}
+
+.books-page select {
+  padding: 2px;
+}
+
 .book-list {
   display: grid;
   grid-template-columns: 1fr;
@@ -27,6 +41,12 @@
 #to-top {
   padding: 25px;
   font-size: 20px;
+}
+
+@media screen and (min-width: 700px) {
+  .books-page form {
+    flex-direction: row;
+  }
 }
 
 @media screen and (min-width: 850px) {
