@@ -65,7 +65,7 @@ export default function Form(props) {
         <textarea name="summary" id="summary" value={summary} onChange={e => setSummary(e.target.value)} placeholder="John Doe, a fervid reader, was looking for a book to read. That's when he found a website that could choose one for him!"></textarea>
       </div>
       <div className="buttons">
-        {params.id ? <Link to={`/books/show/${params.id}`}><button type="button">Cancel</button></Link> : null}
+        {params.id ? <Link to={`/books/show/${params.id}`}><button type="button" className="cancel-button">Cancel</button></Link> : null}
         <button type="submit">Submit</button>
       </div>
     </form>

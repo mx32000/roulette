@@ -22,6 +22,14 @@ form .inputs textarea {
   height: 150px;
 }
 
+form .buttons button {
+  margin: 20px;
+}
+
+form .buttons .cancel-button {
+  background-color: #b30606;
+}
+
 @media screen and (min-width: 750px) {
   form {
     margin: 50px 12%;
