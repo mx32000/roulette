@@ -33,7 +33,7 @@
 }
 
 .roulette .book img {
-  max-height: 75vh;
+  max-height: 40vh;
   width: auto;
 }
 
@@ -58,5 +58,9 @@
 
   .roulette .book h2 {
     font-size: 36px;
+  }
+
+  .roulette .book img {
+    max-height: 75vh;
   }
 }
