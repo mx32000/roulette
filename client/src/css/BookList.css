@@ -1,3 +1,7 @@
+.books-page label {
+  padding: 5px;
+}
+
 .book-list {
   display: grid;
   grid-template-columns: 1fr;
