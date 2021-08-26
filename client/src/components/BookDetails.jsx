@@ -12,10 +12,13 @@ export default function BookDetails(props) {
   if (!book) return null;
 
   const deleteBook = async () => {
-    await axios.delete(`${baseUrl}/${params.id}`, config);
-    props.setToggleFetch(prevState => !prevState);
-    props.setActiveTab("See All Books");
-    history.push("/books")
+    const certain = window.confirm("Are you sure you want to delete this book? It will be removed from the database permanently.");
+    if(certain) {
+      await axios.delete(`${baseUrl}/${params.id}`, config);
+      props.setToggleFetch(prevState => !prevState);
+      props.setActiveTab("See All Books");
+      history.push("/books")
+    }
   }
 
   return book.fields.title ? (
