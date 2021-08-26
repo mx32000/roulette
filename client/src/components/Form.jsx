@@ -35,7 +35,7 @@ export default function Form(props) {
     const newBook = {
       title,
       author,
-      image,
+      image: image || "https://res.cloudinary.com/dcdasnmmz/image/upload/v1630005197/Roulette/no_image_image_flwnvp.jpg",
       genre,
       summary
     }
@@ -57,10 +57,10 @@ export default function Form(props) {
         <input type="text" name="title" id="title" value={title} onChange={e => setTitle(e.target.value)} placeholder="Book Title" required/>
         <label htmlFor="author">Author</label>
         <input type="text" name="author" id="author" value={author} onChange={e => setAuthor(e.target.value)} placeholder="Author Name"/>
-        <label htmlFor="image">Image URL</label>
-        <input type="text" name="image" id="image" value={image} onChange={e => setImage(e.target.value)} placeholder="Genre Name"/>
         <label htmlFor="genre">Genre</label>
-        <input type="text" name="genre" id="genre" value={genre} onChange={e => setGenre(e.target.value)} placeholder="https://samplesite.org/book_cover.jpg"/>
+        <input type="text" name="genre" id="genre" value={genre} onChange={e => setGenre(e.target.value)} placeholder="Genre Name"/>
+        <label htmlFor="image">Image URL</label>
+        <input type="text" name="image" id="image" value={image} onChange={e => setImage(e.target.value)} placeholder="https://samplesite.org/book_cover.jpg"/>
         <label htmlFor="summary">Summary</label>
         <textarea name="summary" id="summary" value={summary} onChange={e => setSummary(e.target.value)} placeholder="John Doe, a fervid reader, was looking for a book to read. That's when he found a website that could choose one for him!"></textarea>
       </div>
