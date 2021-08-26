@@ -13,6 +13,7 @@ export default function Roulette(props) {
     }
     const bookInd = Math.floor(Math.random() * books.length);
     setBook(books[bookInd]);
+    props.setFrom("roulette");
   }
 
   return (

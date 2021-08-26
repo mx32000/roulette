@@ -21,6 +21,16 @@ export default function BookDetails(props) {
     }
   }
 
+  const goBack = () => {
+    if (props.from === "roulette") {
+      props.setActiveTab("Home");
+      history.push("/");
+    } else {
+      props.setActiveTab("See All Books");
+      history.push("/books");
+    }
+  }
+
   return book.fields.title ? (
     <div className="details">
       <img src={book.fields.image} alt={`${book.fields.title} cover`} className="wide"/>
@@ -34,6 +44,7 @@ export default function BookDetails(props) {
           <Link to={`/books/edit/${book.id}`}><button>Edit</button></Link>
           <button onClick={deleteBook} className="delete-button">Delete</button>
         </div>
+        <a href="#" onClick={goBack} className="back">Back</a>
       </div>
     </div>
   ) : null;

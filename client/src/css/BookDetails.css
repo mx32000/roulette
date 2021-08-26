@@ -6,7 +6,7 @@
   display: none;
 }
 
-.details h2 {
+.details .words h2 {
   padding: 10px 0;
 }
 
@@ -16,18 +16,25 @@
   max-width: 100%;
 }
 
-.details p {
+.details .words p {
   text-align: left;
   padding: 10px;
 }
 
-.details .buttons {
+.details .words .buttons {
   display: flex;
   justify-content: space-evenly;
+  padding: 5px 0;
 }
 
-.details .buttons .delete-button {
+.details .words .buttons .delete-button {
   background-color: #b30606;
+}
+
+.details .words .back {
+  display: inline-block;
+  font-size: 20px;
+  margin: 20px 0;
 }
 
 @media screen and (min-width: 751px) {
@@ -60,11 +67,11 @@
     max-width: 100%;
   }
 
-  .details .buttons {
+  .details .words .buttons {
     justify-content: flex-start;
   }
 
-  .details .buttons button {
+  .details .words .buttons button {
     margin-right: 30px;
   }
 }
