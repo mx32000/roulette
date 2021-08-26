@@ -1,41 +1,41 @@
-form.input-form {
+form.info-form {
   margin: 20px;
 }
 
-form.input-form .inputs {
+form.info-form .inputs {
   margin-bottom: 25px;
   display: flex;
   flex-direction: column;
   text-align: left;
 }
 
-form.input-form .inputs label {
+form.info-form .inputs label {
   padding: 3px;
 }
 
-form.input-form .inputs input {
+form.info-form .inputs input {
   padding: 3px;
 }
 
-form.input-form .inputs textarea {
+form.info-form .inputs textarea {
   font-family: Arial, Helvetica, sans-serif;
   height: 150px;
 }
 
-form.input-form .buttons button {
+form.info-form .buttons button {
   margin: 20px;
 }
 
-form.input-form .buttons .cancel-button {
+form.info-form .buttons .cancel-button {
   background-color: #b30606;
 }
 
 @media screen and (min-width: 750px) {
-  form.input-form {
+  form.info-form {
     margin: 50px 12%;
   }
   
-  form.input-form .inputs {
+  form.info-form .inputs {
     display: grid;
     grid-template-columns: 1fr 83%;
     grid-template-rows: repeat(4, 1fr), 4fr;
