@@ -16,7 +16,7 @@ export default function BookList(props) {
 
   return (
     <div className="books-page">
-      <form>
+      <for onSubmit={() => null}>
         <div className="form-group"> 
           <label htmlFor="search">Search:</label>
           <input type="text" name="search" id="search" value={search} onChange={e => setSearch(e.target.value)}/>
@@ -30,7 +30,7 @@ export default function BookList(props) {
             <option value="keyword">Keyword</option>
           </select>
         </div>
-      </form>
+      </for>
       <div className="book-list">
         {books.filter(book => matchesSearch(book))
           .map((book, index) => <Book book={book} key={index} setActiveTab={() => setActiveTab("")} />)}
