@@ -18,8 +18,8 @@ export default function BookList(props) {
   return (
     <div className="books-page">
       <form onSubmit={e => {
-        e.preventDefault();
         Keyboard.dismiss();
+        e.preventDefault();
       }}>
         <div className="form-group"> 
           <label htmlFor="search">Search:</label>
