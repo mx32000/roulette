@@ -18,7 +18,6 @@ export default function BookList(props) {
     <div className="books-page">
       <form onSubmit={e => {
         e.preventDefault();
-        e.target.blur();
       }}>
         <div className="form-group"> 
           <label htmlFor="search">Search:</label>
