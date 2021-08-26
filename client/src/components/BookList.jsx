@@ -14,7 +14,7 @@ export default function BookList(props) {
       <div className="book-list">
         {props.books.filter(book => book.fields.title.toLowerCase().includes(search.toLowerCase()))
           .map((book, index) => <Book book={book} key={index} setActiveTab={() => props.setActiveTab("")} />)}
-        <a href="#" id="to-top">To Top</a>
+        <a href="#top" id="to-top">To Top</a>
       </div>
     </div>
   )
