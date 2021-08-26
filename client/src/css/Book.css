@@ -9,7 +9,7 @@
 }
 
 .book img {
-  max-width: 90%;
+  max-width: 50vh;
 }
 
 .book a {
@@ -20,5 +20,9 @@
 @media screen and (min-width: 750px) {
   .book h2 {
     padding: 25px 0;
+  }
+
+  .book img {
+    max-width: 90%;
   }
 }

@@ -41,7 +41,12 @@ header .nav-container nav a:hover, header .nav-container nav a.active {
   background-color: #c9da5f;
 }
 
+/* query for max-width for navbar since toggle menu is more complicated */
 @media screen and (max-width: 750px) {
+  header {
+    margin-bottom: 10px;
+  }
+
   header .header button {  
     background-color: rgb(78, 84, 33);
     margin-left: auto;
