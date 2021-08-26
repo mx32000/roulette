@@ -9,7 +9,8 @@
 }
 
 .book img {
-  max-width: 200px;
+  max-height: 40vh;
+  max-width: 90%;
 }
 
 .book a {
@@ -23,6 +24,6 @@
   }
 
   .book img {
-    max-width: 90%;
+    max-height: auto;
   }
 }
