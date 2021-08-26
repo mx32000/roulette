@@ -16,7 +16,7 @@ export default function BookList(props) {
 
   return (
     <div className="books-page">
-      <form onSubmit={() => null}>
+      <form onSubmit={e => e.preventDefault()}>
         <div className="form-group"> 
           <label htmlFor="search">Search:</label>
           <input type="text" name="search" id="search" value={search} onChange={e => setSearch(e.target.value)}/>
