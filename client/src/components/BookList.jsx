@@ -3,11 +3,16 @@ import "../css/BookList.css"
 import { useEffect, useState } from "react";
 
 export default function BookList(props) {
+  const {books, setActiveTab, setFrom} = props;
   const [search, setSearch] = useState("");
   const [field, setField] = useState("title");
-  const {books, setActiveTab, setFrom} = props;
+  const [results, setResults] = useState(books);
 
   useEffect(() => {setFrom("list")}, [setFrom]);
+
+  useEffect(() => {
+    setResults(books.filter(book => matchesSearch(book)));
+  }, [search, field, books])
 
   const matchesSearch = (book) => {
     const choices = field === "keyword" ? [book.fields.title, book.fields.author, book.fields.genre, book.fields.summary] : [book.fields[field]];
@@ -32,8 +37,7 @@ export default function BookList(props) {
         </div>
       </form>
       <div className="book-list">
-        {books.filter(book => matchesSearch(book))
-          .map((book, index) => <Book book={book} key={index} setActiveTab={() => setActiveTab("")} />)}
+        {results.map((book, index) => <Book book={book} key={index} setActiveTab={setActiveTab} />)}
         <a href="#top" id="to-top">To Top</a>
       </div>
     </div>
