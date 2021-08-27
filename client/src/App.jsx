@@ -10,9 +10,15 @@ import { baseUrl, config } from './services';
 import BookDetails from './components/BookDetails';
 
 function App() {
+  const tabNames = {
+    "/": "Home",
+    "/books": "See All Books",
+    "/books/new": "Add New Book"
+  }
+
   const [books, setBooks] = useState([]);
   const [toggleFetch, setToggleFetch] = useState(false);
-  const [activeTab, setActiveTab] = useState("Home");
+  const [activeTab, setActiveTab] = useState(tabNames[window.location.pathname]);
   const [from, setFrom] = useState("");
   const [book, setBook] = useState({});
 

@@ -38,7 +38,7 @@ export default function BookList(props) {
       </form>
       <div className="book-list">
         {results.map((book, index) => <Book book={book} key={index} setActiveTab={setActiveTab} />)}
-        <a href="#top" id="to-top">To Top</a>
+        {results.length > 1 ? <a href="#top" id="to-top">To Top</a> : null}
       </div>
     </div>
   )
