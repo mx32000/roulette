@@ -37,7 +37,7 @@ function App() {
         <Form books={books} setToggleFetch={setToggleFetch} setActiveTab={setActiveTab}/>
       </Route>
       <Route path="/books/show/:id">
-        <BookDetails books={books} setToggleFetch={setToggleFetch} setActiveTab={setActiveTab} from={from}/>
+        <BookDetails books={books} setToggleFetch={setToggleFetch} setActiveTab={setActiveTab} from={from} setBook={setBook}/>
       </Route>
       <Route path="/books/edit/:id">
         <Form books={books} setToggleFetch={setToggleFetch} setActiveTab={setActiveTab}/>

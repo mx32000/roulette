@@ -11,13 +11,16 @@ export default function BookDetails(props) {
   const book = props.books.find(book => book.id === params.id);
   if (!book) return null;
 
+  const [page, activeTab] = props.from === "roulette" ? ["/", "Home"] : ["/books", "See All Books"];
+
   const deleteBook = async () => {
     const certain = window.confirm("Are you sure you want to delete this book? It will be removed from the database permanently.");
     if(certain) {
       await axios.delete(`${baseUrl}/${params.id}`, config);
       props.setToggleFetch(prevState => !prevState);
-      props.setActiveTab("See All Books");
-      history.push("/books")
+      props.setBook({})
+      props.setActiveTab(activeTab);
+      history.push(page)
     }
   }
 
@@ -34,7 +37,7 @@ export default function BookDetails(props) {
           <Link to={`/books/edit/${book.id}`}><button>Edit</button></Link>
           <button onClick={deleteBook} className="delete-button">Delete</button>
         </div>
-        <Link to={props.from === "roulette" ? "/" : "/books"} onClick={() => props.setActiveTab(props.from === "roulette" ? "Home" : "See All Books")} className="back">Back</Link>
+        <Link to={page} onClick={() => props.setActiveTab(activeTab)} className="back">Back</Link>
       </div>
     </div>
   ) : null;
