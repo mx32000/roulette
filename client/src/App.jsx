@@ -21,6 +21,7 @@ function App() {
   const [activeTab, setActiveTab] = useState(tabNames[window.location.pathname]);
   const [from, setFrom] = useState("");
   const [book, setBook] = useState({});
+  const [query, setQuery] = useState(["", "title"]);
 
   useEffect(() => {
     const getBooks = async () => {
@@ -37,7 +38,7 @@ function App() {
         <Roulette books={books} setActiveTab={setActiveTab} setFrom={setFrom} book={book} setBook={setBook}/>
       </Route>
       <Route path="/books" exact>
-        <BookList books={books} setActiveTab={setActiveTab} setFrom={setFrom}/>
+        <BookList books={books} setActiveTab={setActiveTab} setFrom={setFrom} query={query} setQuery={setQuery}/>
       </Route>
       <Route path="/books/new">
         <Form books={books} setToggleFetch={setToggleFetch} setActiveTab={setActiveTab}/>
